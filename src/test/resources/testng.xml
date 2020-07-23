@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All test suites">
+    <groups>
+        <!-- runs group that are included and omits that are excluded -->
+        <!--<run>
+            <include name="included_group_1" />
+            <include name="included_group_2" />
+            <exclude name="excluded_group_1" />
+            <exclude name="excluded_group_2" />
+        </run>-->
+
+        <!-- defines dependencies of groups on one another -->
+        <!--<dependencies>
+            <group name="group_1" depends-on="group_0" />
+            <group name="group_2" depends-on="group_1" />
+        </dependencies>-->
+    </groups>
+
+    <!-- parameters -->
+    <parameter name="browser" value="chrome" />
+    <parameter name="param" value="read from test method" />
+
+    <parameter name="testerRoleAdmin" value="Admin" />
+    <parameter name="testerRoleUser" value="User" />
+
+    <!-- Listeners -->
+    <listeners>
+        <listener class-name="manager.MyTestNGListener" />
+    </listeners>
+
+    <!-- suite files -->
+    <suite-files>
+<!--        <suite-file path="suitea.xml" />-->
+<!--        <suite-file path="suiteb.xml" />-->
+        <suite-file path="exercise_suite.xml" />
+    </suite-files>
+</suite>
